@@ -1,0 +1,65 @@
+:root {
+  color-scheme: dark;
+}
+#form {
+    width: 330px;
+    margin: 0 40px 40px 100px;
+}
+#form p {
+    margin: 0 0 15px;
+}
+#form input {
+    width: 140px;
+    margin: 0 20px 0 5px;
+    cursor: text;
+    padding: 0 10px;
+    float: right;
+}
+#form select {
+    width: 164px;
+    margin: 0 20px 0 5px;
+    cursor: pointer;
+    padding: 0 8px;
+    float: right;
+}
+button {
+    padding: 3px 0;
+    width: 167px;
+    cursor: pointer;
+    margin-right: 19px;
+    margin-top: 2px;
+    float: right;
+    border: 1px solid #111111;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+button.classic {
+    float: none;
+}
+button:hover {
+    color: #333;
+    border: 1px solid #eee;
+    background-color: #aaa;
+    box-shadow: 0 0 5px rgba(255,255,255,0.5);
+}
+#form textarea {
+    margin: 20px 0 40px 100px;
+    width: 500px;
+    height: 200px;
+}
+table.dataframe {
+    font-size: 13px;
+    text-align: left;
+    margin: 40px 0 0 82px;
+}
+table.dataframe th {
+    color: #dddddd;
+    border-bottom: 1px solid #111111;
+    padding: 5px 20px 5px 20px;
+    text-align: left;
+}
+table.dataframe td {
+    color: #aaaaaa;
+    border-bottom: 1px solid #111111;
+    padding: 5px 20px 5px 20px;
+}

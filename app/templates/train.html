@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1 class="heading">Monster Trainer</h1>
+    <h2 class="highlight">Model Status: <span id="status">Ready</span></h2>
+    <h5>
+        Name:
+        <span class="highlight">{{ name }}</span><br>
+        Time Stamp:
+        <span class="highlight">{{ time_stamp }}</span><br>
+        Validation Score:
+        <span class="highlight">{{ test_score }}</span><br>
+        Total Monsters Seen:
+        <span class="highlight">{{ total }}</span><br>
+        Available Unseen Monsters:
+        <span class="highlight">{{ available }}</span><br>
+    </h5>
+    <p>
+        <button class="classic" onclick="retrain_model()">
+            Retrain Model
+        </button>
+        <button class="classic" onclick="download_model()">
+            Download Model
+        </button>
+    </p>
+    <script type="application/javascript">
+        function retrain_model() {
+            const target = document.getElementById("status");
+            target.innerText = "Training";
+            window.location.replace("/retrain");
+        }
+
+        function download_model() {
+            window.location.replace("/download");
+        }
+    </script>
+{% endblock %}

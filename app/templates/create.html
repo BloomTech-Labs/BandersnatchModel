@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1 class="heading">Monster Factory</h1>
+    <h2 class="highlight">Database Input</h2>
+    <form id="form" method="post" action="{{ url_for('create') }}">
+        <p><label>Name:<input name="name" placeholder="Enter Name">
+        </label></p>
+        <p><label>Type:<select name="type">
+            {% for op in ["Fey", "Demonic", "Devilkin", "Dragon", "Elemental", "Undead"] %}
+                {% if op == monster_type %}
+                    <option selected="selected">{{ op }}</option>
+                {% else %}
+                    <option>{{ op }}</option>
+                {% endif %}
+            {% endfor %}
+        </select></label></p>
+        <p><label>Level:<select name="level">
+            {% for op in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20] %}
+                {% if op == level %}
+                    <option selected="selected">{{ op }}</option>
+                {% else %}
+                    <option>{{ op }}</option>
+                {% endif %}
+            {% endfor %}
+        </select></label></p>
+        <p><label>Rarity:<select name="rarity">
+            {% for op in ["Rank 0", "Rank 1", "Rank 2", "Rank 3", "Rank 4", "Rank 5"] %}
+                {% if op == rarity %}
+                    <option selected="selected">{{ op }}</option>
+                {% else %}
+                    <option>{{ op }}</option>
+                {% endif %}
+            {% endfor %}
+        </select></label></p>
+        <button type="submit" id="submit" name="submit">Generate Monster
+        </button>
+        <br class="clear"/>
+    </form>
+    {% if monster %}
+        <h3>Monster Added</h3>
+        <p>
+            {% for key, val in monster.items() %}
+                {{ key }}: {{ val }}<br/>
+            {% endfor %}
+        </p>
+        <blockquote>
+            <p>
+                Visit the <a href="{{ url_for('train') }}">training page</a> to
+                retrain the model after creating new monsters. The model will
+                automatically retrain itself at boot-time or whenever the app
+                is restarted.
+            </p>
+        </blockquote>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1 class="heading">Monster Classifier</h1>
+    <h2 class="highlight">Target: Rarity Rank</h2>
+    <h3>Feature Input</h3>
+    <form id="form" method="post" action="{{ url_for('predict') }}">
+        <p><label>Level: <select name="level">
+            {% for op in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20] %}
+                {% if op == level %}
+                    <option selected="selected">{{ op }}</option>
+                {% else %}
+                    <option>{{ op }}</option>
+                {% endif %}
+            {% endfor %}
+        </select></label></p>
+        <p><label>Health: <input name="health" value="{{ health }}"/>
+        </label></p>
+        <p><label>Energy: <input name="energy" value="{{ energy }}"/>
+        </label></p>
+        <p><label>Sanity: <input name="sanity" value="{{ sanity }}"/>
+        </label></p>
+        <button type="submit" id="submit" name="submit">Predict Rarity</button>
+        <br class="clear"/>
+    </form>
+    <h5>
+        Prediction: <span class="highlight">{{ prediction }}</span>
+        <br>
+        Confidence: <span class="highlight">{{ confidence }}</span>
+    </h5>
+{% endblock %}
