@@ -92,7 +92,7 @@ def predict():
             energy,
             sanity,
         ])
-        confidence = f"{100*confidence:.0f}%"
+        confidence = f"{100 * confidence:.0f}%"
     else:
         prediction, confidence = "", ""
 
