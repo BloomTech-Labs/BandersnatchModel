@@ -33,6 +33,13 @@ _Web Guided Projects_.
 - Random Monsters: _TOP SECRET - LINK REDACTED_
 
 
+### Features
+- Data Creation
+- Data Viewing
+- Model Training
+- Predictions
+
+
 ### MonsterLab: Monster Spec 42
 - Name: String
 - Type: String
