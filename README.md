@@ -15,7 +15,6 @@ this role and put your name in their place on the home page. See
 `app/templates/index.html`. Then, await further orders in the guise of 
 _DS Workshops_.
 
-
 ~Dr. B, MonsterFactory inc. CEO
 
 
