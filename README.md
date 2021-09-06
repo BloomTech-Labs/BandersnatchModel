@@ -60,3 +60,11 @@ _DS Workshops_.
 - This list is lacking
 - You're lacking
 - Am not!
+
+
+### Extra Credit
+- Implement Download Model button
+- Implement Retrain Model button
+- Pair up with a Data Eng and incorporate their Data Interface into your app
+- Pair up with an ML Ops and incorporate their API into your app
+- All the above
