@@ -13,8 +13,8 @@ into a jam, he can pull you out. He's one of our most loyal agents, trust him.
 Your first task is to erase all traces of Eugene Albright, commit to owning
 this role and put your name in their place on the home page. See
 `app/templates/index.html`. Then, await further orders in the guise of 
-_DS Guided Projects_, not to be confused with the social calamities known as 
-_Web Guided Projects_.
+_DS Workshops_.
+
 
 ~Dr. B, MonsterFactory inc. CEO
 
